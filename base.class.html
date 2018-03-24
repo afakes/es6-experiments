@@ -1,0 +1,25 @@
+<script>
+class base {
+
+    constructor(resultID) {
+        this.resultID = resultID;
+    }
+
+    makeNoise() {
+        let str = `${this.name} goes ${this.noise}`;
+        console.log(str);
+        let resultElement = document.getElementById(this.resultID);
+        resultElement.innerHTML = `${resultElement.innerHTML}<br>${str}`;
+    }
+
+    get name() {
+        return '';
+    }
+
+    get noise() {
+        return '';
+    }
+
+
+}
+</script>

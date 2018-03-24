@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="instance.class.js" ></script>
+</head>
+<body>
+    <h1>Extends</h1>
+    <i>loader class is only class to be loaded, for others we provide url</i>
+    <div id="result"></div>
+
+    <script>
+
+
+
+        instance.from('cat.class.html').then(
+            (catClass) => {
+                let mannCat = new catClass('result');
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+
+            }
+        );
+
+        instance.from('tiger.class.html').then(
+            (tigerClass) => {
+                let mannTiger = new tigerClass('result');
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+            }
+        );
+
+
+    </script>
+
+</body>
+</html>
