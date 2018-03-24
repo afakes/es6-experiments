@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script src="instance.class.js" ></script>
+</head>
+<body>
+    <h1>Remotes Classes</h1>
+    <i>Load classes from URL across internet</i>
+    <div id="result"></div>
+
+    <script>
+
+
+        instance.from('https://raw.githubusercontent.com/afakes/es6-experiments/master/cat.class.html').then(
+            (catClass) => {
+                let mannCat = new catClass('result');
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+                mannCat.makeNoise();
+
+            }
+        );
+
+        instance.from('https://raw.githubusercontent.com/afakes/es6-experiments/master/tiger.class.html').then(
+            (tigerClass) => {
+                let mannTiger = new tigerClass('result');
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+                mannTiger.makeNoise();
+            }
+        );
+
+
+    </script>
+
+</body>
+</html>
